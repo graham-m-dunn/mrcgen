@@ -1,0 +1,31 @@
+# line I minutes power
+# line R repeats from line
+
+#1 I 10 75
+#2 I 0.5 100
+#3 I 1 65
+#4 R 5 2
+#5 I 5 75
+#6 I 10 100
+#7 I 3 65
+#8 R 3 6
+#9 I 5 60
+
+Read into new_list, each line as its own element as list [#, type, arg2, arg3] 
+(args[23] will be different depending on type)
+
+for i in range(len(new_list)):
+
+    new_workout[i] = process_element(newlist[i])
+
+Process_element(item):
+	create new blank workout 
+	if type == "I":  #Interval  
+	   new_element[0] = 1
+	   new_element[1] = [item[2], item[3]]
+	   return new_element
+	if type == "R": #Repeat
+	   for i in range(item[2]):
+	       
+	    
+	    
