@@ -7,7 +7,7 @@ text file consisting of a series of lines of either Intervals or Repeat directiv
 Interval format
 ---------------
 
-I minutes %FTP
+I minutes percentFTP
 
 Repeat format
 _____________
