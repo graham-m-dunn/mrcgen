@@ -3,6 +3,33 @@ Generating MRC workouts
 
 This script will take a workout description and output a computrainer compatible .mrc file
 
+Usage
+-----
+    gdunn@ni:/home/gdunn/src/mrcgen$ ./mrcgen.py ftp-development.txt        
+    [COURSE HEADER]
+    VERSION = 2
+    UNITS =  METRIC
+    DESCRIPTION =  FTP bread and butter
+    FILE NAME = ftp-development.mrc
+    MINUTES PERCENTAGE
+    [END COURSE HEADER]
+    [COURSE DATA]
+    0.000000 75.000000
+    10.000000 75.000000
+    10.000000 85.000000
+    30.000000 85.000000
+    30.000000 65.000000
+    34.000000 65.000000
+    34.000000 85.000000
+    54.000000 85.000000
+    54.000000 65.000000
+    58.000000 65.000000
+    58.000000 50.000000
+    64.000000 50.000000
+    [END COURSE DATA]
+
+
+
 Example
 -------
     2, METRIC, PreSeason Week 1: Tuesday Interval
