@@ -1,30 +1,37 @@
 Generating MRC workouts
 -----------------------
 
-I still need to figure out a reasonable format for specifying the workouts. Best thought so far is a 
-text file consisting of a series of lines of either Intervals or Repeat directives. This will lend itself 
-to a web page form interface.
-
-Interval format
----------------
-
-Line I minutes percentFTP
-
-Repeat format
--------------
-
-Line R repeat_from_line repeat_to_line repetitions
+This script will take a workout description and output a computrainer compatible .mrc file
 
 Example
 -------
+2, METRIC, PreSeason Week 1: Tuesday Interval
+1 x ([10, 75], 
+     5 x ([0.5, 100], [0.5, 65]), 
+     [5, 75], 
+     3 x ([10, 100], [3, 65]), 
+     [5, 60])
 
-    1 I 10 75
-    2 I 0.5 100
-    3 I 1 65
-    4 R 2 3 5
-    5 I 5 75
-    6 I 10 100
-    7 I 3 65
-    8 R 6 7 3
-    9 I 5 60
+Explanation
+-----------
 
+Line 1 of the file must be:
+MRC Version, METRIC or ENGLISH, description of the workout (no commas!)
+
+The remainer of the file describes the workout:
+1 x (the workout) : you can change the "1" to "2" if you want to do the workout twice, for example
+
+where "the workout" is a list of intervals, so the workout in the example has
+
+Interval 1: [10, 75] = 10 minutes at 75% FTP
+Interval 2: 5 x ([0.5, 100], [0.5, 65]) = 30 seconds at 100% FTP, 30 seconds at 65% FTP, repeated 5 times
+Interval 3: [5, 75] = 5 minutes at 75% FTP
+Interval 4: 3 x ([10, 100], [3, 65]) = 10 minutes at 100% FTP, 3 minutes at 65% FTP, repeated 3 times
+Interval 5: [5, 60] = 5 minutes at 60% FTP
+
+Another Example
+---------------
+2, METRIC, FTP bread and butter
+1 x ([10, 75],
+     2 x ([20, 85], [4, 65]),
+     [6, 50])
