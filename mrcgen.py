@@ -52,7 +52,7 @@ def course_header(version, units, description, filename):
     """
     Print the standard MRC file header
     """
-    return "[COURSE HEADER]\nVERSION = " + str(version) + "\nUNITS = " + str(units) + "\nDESCRIPTION = " + description + "\nFILE NAME = " + filename + "\nMINUTES PERCENTAGE\n[END COURSE HEADER]\n"
+    return "[COURSE HEADER]\nVERSION = " + str(version) + "\nUNITS = " + str(units) + "\nDESCRIPTION = " + description + "\nFILE NAME = " + filename + "\nMINUTES PERCENT\n[END COURSE HEADER]\n"
 
 def course_data(final_workout):
     """
