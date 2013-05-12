@@ -35,6 +35,15 @@ class MainPage(webapp2.RequestHandler):
                     <label>Workout</label><textarea name="content" rows="10" cols="60"></textarea>
                     <input type="submit" value="Generate">
                 </form></div>
+                <div>A valid workout looks like:
+                    <pre>
+                    1 x ([5, 65],
+                        3 x (
+                            4 x ([0.66, 120], [1.33, 85]),
+                            [4, 50]
+                        ),
+                        [5, 65])</pre>
+                    which is 5 minutes at 65%, 3 x 4 sets of 40s at 120%, 80s at 65% followed by 4 min at 50%, then 5 min at 65%.
             </body>
         </html>""")
 
